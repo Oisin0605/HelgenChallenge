@@ -1,16 +1,25 @@
 #include <iostream>
 #include <vector>
-#include <string>
+#include <cstring>
+#include <sstream>
 
 using namespace std;
 
 int main()
 {
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
+    string input = "123";
+    int final = 0;
 
-    for (const string& word : msg)
-    {
-        cout << word << " ";
+    if(input.length() > 1) {
+        digitSum(input);
+    } else {
+        stringstream toInt(input);
+        toInt >> final;
     }
-    cout << endl;
+
+    cout << "Total of digits is " << final;
+}
+int digitSum(string input) {
+
+    return 0;
 }
